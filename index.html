@@ -286,7 +286,7 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
                               <div class="row">
                                 <div class="col-11 col-sm-10">
                                     <h3 class="hs-title-5 font-alt overflow-hidden mb-100 mb-md-40">
-                                        <span class="d-block wow fadeRotateIn">
+                                        <span class="d-block wow fadeRotateIn" id="Our_ser_slider">
                                             Our Services
                                         </span>
                                     </h3>
@@ -306,24 +306,24 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
                                     </div>
                                 </div>
                                 
-                                <ul class="nav nav-tabs services-tabs wow fadeInUp" data-wow-delay="0.55s" role="tablist">
-                                    <li role="presentation">
-                                        <a href="#services-item-1" class="active" aria-controls="services-item-1" role="tab" aria-selected="true" data-bs-toggle="tab">IT Consulting<span class="number">01</span></a>
+                                <ul id="scroller_Eff" class="nav nav-tabs services-tabs wow fadeInUp" data-wow-delay="0.55s" role="tablist" >
+                                    <li role="presentation" class="presentation" id="1" set-status="true">
+                                        <a href="#services-item-1" id="1"  class="presentation_list" aria-controls="services-item-1" role="tab" aria-selected="true" data-bs-toggle="tab">IT Consulting<span class="number">01</span></a>
                                     </li>
-                                    <li role="presentation">
-                                        <a href="#services-item-2" aria-controls="services-item-2" role="tab" aria-selected="false" data-bs-toggle="tab">Web & Mobile Development <span class="number">02</span></a>
+                                    <li role="presentation" class="presentation" id="2" set-status="false">
+                                        <a href="#services-item-2"  id="2" class="presentation_list" aria-controls="services-item-2" role="tab" aria-selected="false" data-bs-toggle="tab">Web & Mobile Development <span class="number">02</span></a>
                                     </li>
-                                    <li role="presentation">
-                                        <a href="#services-item-3" aria-controls="services-item-3" role="tab" aria-selected="false" data-bs-toggle="tab">Native and Cross Platform Apps<span class="number">03</span></a>
+                                    <li role="presentation" class="presentation" id="3" set-status="false">
+                                        <a href="#services-item-3" id="3" class="presentation_list" aria-controls="services-item-3" role="tab" aria-selected="false" data-bs-toggle="tab">Native and Cross Platform Apps<span class="number">03</span></a>
                                     </li>
-                                    <li role="presentation">
-                                        <a href="#services-item-4" aria-controls="services-item-4" role="tab" aria-selected="false" data-bs-toggle="tab">Customized Solutions<span class="number">04</span></a>
+                                    <li role="presentation" class="presentation" id="4" set-status="false">
+                                        <a href="#services-item-4" id="4" class="presentation_list" aria-controls="services-item-4" role="tab" aria-selected="false" data-bs-toggle="tab">Customized Solutions<span class="number">04</span></a>
                                     </li>
-                                    <li role="presentation">
-                                        <a href="#services-item-5" aria-controls="services-item-5" role="tab" aria-selected="false" data-bs-toggle="tab">Project Development <span class="number">05</span></a>
+                                    <li role="presentation" class="presentation" id="5" set-status="false">
+                                        <a href="#services-item-5" id="5" class="presentation_list" aria-controls="services-item-5" role="tab" aria-selected="false" data-bs-toggle="tab">Project Development <span class="number">05</span></a>
                                     </li>
-                                    <li role="presentation">
-                                        <a href="#services-item-6" aria-controls="services-item-6" role="tab" aria-selected="false" data-bs-toggle="tab">ISO Certification <span class="number">06</span></a>
+                                    <li role="presentation" class="presentation" id="6" set-status="false">
+                                        <a href="#services-item-6" id="6" class="presentation_list" aria-controls="services-item-6" role="tab" aria-selected="false" data-bs-toggle="tab">ISO Certification <span class="number">06</span></a>
                                     </li>
                                 </ul>                                
                                 
@@ -449,7 +449,7 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
                  <!-- Call Action Section -->
                 <section class="page-section bg-dark-1 light-content" id="strategy">
                     <div class="container position-relative">
-                        <div class="row">
+                        <div class="row checking_active">
                             
                             <!-- Images --> 
                             <div class="col-lg-7 d-flex align-items-center mb-md-60 mb-xs-30">                                                               
@@ -849,6 +849,11 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
                 <!-- End Contact Section -->
            
            </main>
+
+           <p class="scrollable-place"> 
+            <button onclick="stopScroll()">Disable Scrolling</button> 
+            <button onclick="startScroll()">Enable Scrolling</button> 
+           </p> 
             
             <!-- Footer -->
             <footer class="footer-1 bg-dark-2 light-content">
@@ -922,6 +927,70 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
         <script src="js/contact-form.js"></script>        
         <script src="js/all.js"></script>   
         <!-- End JS -->    
+
+        <script>
+            const Selement = document.querySelector('#Our_ser_slider')
+            const Providers = document.querySelector('#scroller_Eff')
+            const presentations = document.querySelectorAll(".presentation")
+            const Services = document.querySelector('#services')
+
+            const container = document.querySelector('container');
+
+
+           
+
+            function disableScroll() {
+  // Store the current scroll position
+            const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Set the body to fixed position
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollPosition}px`;            
+            }
+
+            function enableScroll() {
+              // Retrieve the stored scroll position
+              const scrollPosition = parseInt(document.body.style.top, 0);
+              
+              // Reset the body to its original position
+              document.body.style.position = '';
+              document.body.style.top = '';
+              
+              // Scroll back to the stored position
+              window.scrollTo(0, scrollPosition);
+            }
+
+
+            // window.addEventListener('scroll', () => {
+            //     if(Providers.getBoundingClientRect().top < 600) {
+            //         disableScroll()
+            //     }
+            //     if(Providers.getBoundingClientRect().top < 100) {
+            //         enableScroll()
+            //     }
+            // })
+
+            
+            const AddEvent = (entries , observer) => {
+                if(entries[0].isIntersecting) {
+                  disableScroll()
+                }
+                // else {                    
+                  
+                // }
+            }
+
+            const provider = {
+                threshold: 0.5
+            }
+
+            const observer = new IntersectionObserver(AddEvent,provider)
+
+            observer.observe(Providers)
+
+            
+
+        </script>
         
         
         <!--scrool logo-->

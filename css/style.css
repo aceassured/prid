@@ -245,7 +245,9 @@ body{
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;    
+    text-rendering: optimizeLegibility; 
+    scroll-behavior: smooth;   
+
 }
 main{
     overflow: clip;
@@ -1231,7 +1233,7 @@ hr.thick{
     transform: translateY(-150%) translateZ(0.001px) skewY(-10deg);
 }
 
-.link-hover-anim:hover .link-strong-hovered{;
+.link-hover-anim:hover .link-strong-hovered{
     opacity: 1;
     transform: translateY(0) translateZ(0.001px) skewY(0);
 }
@@ -12448,3 +12450,8 @@ html:not(.mobile) .owl-animate-fadeInDown{
 .works-grid.grid-intro-2 .work-item .work-descr{
     font-size: 16px;
 }
+
+
+/* ------------------------Custom-------------------------- */
+
+
