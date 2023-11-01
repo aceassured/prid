@@ -1038,9 +1038,11 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
             
             let count = 0;
             const AddEvent = (entries , observer) => {
-                if(entries[0].isIntersecting) {                     
-                    document.body.style.overflow = 'hidden'                    
-                    window.addEventListener('wheel',scrollSpy)                    
+                if(entries[0].isIntersecting) {   
+                    if(window.innerWidth > 1024) {
+                        document.body.style.overflow = 'hidden'                    
+                        window.addEventListener('wheel',scrollSpy)                                                
+                    }
                 } else {
                     window.removeEventListener('wheel',scrollSpy)
                 }               
