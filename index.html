@@ -1029,10 +1029,11 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
                             if(count < 0){
                                 count = 0
                                 document.body.style.overflow = 'auto'
+
                             }                            
                         }
 
-                        console.log(count)
+                        // console.log(count)
             }
 
             
@@ -1044,6 +1045,7 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
                         window.addEventListener('wheel',scrollSpy)                                                
                     }
                 } else {
+                    document.body.style.overflow = 'auto'
                     window.removeEventListener('wheel',scrollSpy)
                 }               
             }
