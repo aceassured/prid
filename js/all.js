@@ -32,7 +32,7 @@
         Splitting();
         init_page_sliders();        
         init_parallax_mousemove();
-        init_lazyload();        
+        // init_lazyload();        
         init_loader();
     });    
     
