@@ -943,24 +943,24 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
 
 
 
-            function disableScroll() {                  
-                const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;            
+            // function disableScroll() {                  
+            //     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;            
             
-                document.body.style.position = 'fixed';
-                document.body.style.top = `-${scrollPosition}px`;            
-            }
+            //     document.body.style.position = 'fixed';
+            //     document.body.style.top = `-${scrollPosition}px`;            
+            // }
 
-            function enableScroll() {
-              // Retrieve the stored scroll position
-              const scrollPosition = parseInt(document.body.style.top, 0);
+            // function enableScroll() {
+            //   // Retrieve the stored scroll position
+            //   const scrollPosition = parseInt(document.body.style.top, 0);
               
-              // Reset the body to its original position
-              document.body.style.position = '';
-              document.body.style.top = '';
+            //   // Reset the body to its original position
+            //   document.body.style.position = '';
+            //   document.body.style.top = '';
               
-              // Scroll back to the stored position
-              window.scrollTo(0, scrollPosition);
-            }
+            //   // Scroll back to the stored position
+            //   window.scrollTo(0, scrollPosition);
+            // }
 
             // function stopScrolling(event) {
             //      event.preventDefault();
@@ -969,10 +969,11 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
 
             // window.addEventListener('scroll', () => {
             //     if(Providers.getBoundingClientRect().top < 600) {
-
+            //         document.body.style.overflow = 'hidden'                    
+            //         window.addEventListener('wheel',scrollSpy)                        
             //     }
             //     if(Providers.getBoundingClientRect().top < 100) {
-            //         // enableScroll()
+            //         document.body.style.overflow = 'auto'
             //     }
             // })
             const removeAllActivePresentation = () => {

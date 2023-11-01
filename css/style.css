@@ -168,7 +168,9 @@ Primary use: Multipurpose Template
 /* ==============================
    Variables
    ============================== */
-  
+body::-webkit-scrollbar {
+    display: none;
+}
 :root{
     --font-global: 'DM Sans', sans-serif;
     --font-alt: 'DM Sans', sans-serif;
