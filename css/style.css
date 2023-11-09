@@ -12457,3 +12457,37 @@ html:not(.mobile) .owl-animate-fadeInDown{
 /* ------------------------Custom-------------------------- */
 
 
+.clients-logo-tab{
+    display: none;
+}
+
+
+.seemore-button{
+    background-color: var(--color-dark-1) !important;
+    color: white;
+    border: none;
+    padding: 10px 50px;
+    font-family: 'Clash Grotesk', sans-serif;
+}
+
+/* ------------Media Query- */
+
+@media(max-width:991px){
+    .clients-logo-tab{
+        display: block;
+    }
+    .clients-logo-tabm{
+        display: none;
+    }
+}
+@media(max-width:991px){
+    .clients-logo-amit, .clients-logo-tab{
+        margin-top: 80px;
+    }
+}
+@media(max-width:575px){
+    .clients-logo-pac, .clients-logo-school{
+        margin-top:50px
+    }
+   
+}
