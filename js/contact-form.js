@@ -9,7 +9,7 @@ $(document).ready(function(){
         var user_email = $('input[name=email]').val();
         var user_message = $('textarea[name=message]').val();
 
-        header("Access-Control-Allow-Origin: true");
+        header("Access-Control-Allow-Origin: https://aceassured.github.io/prid");
         // header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
         
         
