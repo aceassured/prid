@@ -8,6 +8,8 @@ $(document).ready(function(){
         var user_name = $('input[name=name]').val();
         var user_email = $('input[name=email]').val();
         var user_message = $('textarea[name=message]').val();
+
+        // header("Access-Control-Allow-Origin: localhost:5501");
         
         
         
