@@ -4245,7 +4245,7 @@ a.logo:hover{
     padding-top:80px ;
     /* padding-top: var(--section-padding-y); */
     /* padding-bottom: var(--section-padding-y); */
-    padding-bottom: 50px;
+    padding-bottom:50px;
 }
 .small-section{
     padding: 100px 0;
