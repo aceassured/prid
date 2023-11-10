@@ -2,6 +2,15 @@
  Contact form
  --------------------------------------------- */
 $(document).ready(function(){
+
+    var getWBody = $.ajax({ cache: false,
+        url: URL,
+        dataType : 'json',
+        type: 'GET',
+        xhrFields: { withCredentials: true }
+        });
+
+
     $("#submit_btn").click(function(){
         
         //get input field values
