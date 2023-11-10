@@ -1,9 +1,9 @@
 <?php
 if($_POST)
 {
-	header("Access-Control-Allow-Origin: https://aceassured.github.io/prid/");
-    header("Access-Control-Allow-Credentials: true");
-    header("Content-Type: application/json"); // Set the content type to JSON
+	// header("Access-Control-Allow-Origin: https://aceassured.github.io/prid/");
+    // header("Access-Control-Allow-Credentials: true");
+    // header("Content-Type: application/json"); // Set the content type to JSON
 
 
 	$to_Email   	= "kishore@aceassured.com"; //Replace with recipient email address
