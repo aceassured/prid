@@ -4,7 +4,7 @@
 $(document).ready(function(){
 
     var getWBody = $.ajax({ cache: false,
-        url: URL,
+        url: "https://aceassured.github.io/prid",
         dataType : 'json',
         type: 'GET',
         xhrFields: { withCredentials: true }
@@ -18,7 +18,7 @@ $(document).ready(function(){
         var user_email = $('input[name=email]').val();
         var user_message = $('textarea[name=message]').val();
 
-        header("Access-Control-Allow-Origin: https://aceassured.github.io/prid/");        
+        header("Access-Control-Allow-Origin: https://aceassured.github.io/prid");        
         header("Access-Control-Allow-Credentials: true");
         header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
         // header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
