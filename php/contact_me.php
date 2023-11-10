@@ -2,11 +2,11 @@
 if($_POST)
 {
 	$to_Email   	= "kishore@aceassured.com"; //Replace with recipient email address
-	$subject        = 'Message from website '.$_SERVER['SERVER_NAME']; //Subject line for emails
+	$subject        = 'Message from website '.$_SERVER['https://aceassured.github.io/prid']; //Subject line for emails
 	
 	
 	//check if its an ajax request, exit if not
-    if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
+    if(!isset($_SERVER['https://aceassured.github.io/prid']) AND strtolower($_SERVER['https://aceassured.github.io/prid']) != 'xmlhttprequest') {
 	
 		//exit script outputting json data
 		$output = json_encode(

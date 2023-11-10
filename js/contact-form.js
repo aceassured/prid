@@ -15,7 +15,7 @@ $(document).ready(function(){
     $("#submit_btn").click(function(){
         
         
-        header("Access-Control-Allow-Credentials: true");
+        // header("Access-Control-Allow-Credentials: true");
         
         //get input field values
         var user_name = $('input[name=name]').val();
