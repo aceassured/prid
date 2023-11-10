@@ -1,12 +1,17 @@
 <?php
 if($_POST)
 {
-	$to_Email   	= "kishore@aceassured.com"; //Replace with recipient email address
-	$subject        = 'Message from website '.$_SERVER['https://aceassured.github.io/prid']; //Subject line for emails
+	header("Access-Control-Allow-Origin: https://aceassured.github.io");
+    header("Access-Control-Allow-Credentials: true");
+    header("Content-Type: application/json"); // Set the content type to JSON
+
+
+	$to_Email   	= "themeguru.envato@gmail.com"; //Replace with recipient email address
+	$subject        = 'Message from website '.$_SERVER['SERVER_NAME']; //Subject line for emails
 	
 	
 	//check if its an ajax request, exit if not
-    if(!isset($_SERVER['https://aceassured.github.io/prid']) AND strtolower($_SERVER['https://aceassured.github.io/prid']) != 'xmlhttprequest') {
+    if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
 	
 		//exit script outputting json data
 		$output = json_encode(
