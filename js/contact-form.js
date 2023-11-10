@@ -9,6 +9,10 @@ $(document).ready(function(){
         var user_email = $('input[name=email]').val();
         var user_message = $('textarea[name=message]').val();
         
+        
+        
+
+        
         //simple validation at client's end
         //we simply change border color to red if empty field using .css()
         var proceed = true;
@@ -41,10 +45,12 @@ $(document).ready(function(){
                 //load json data from server and output message     
                 if (response.type == 'error') {
                     output = '<div class="error">' + response.text + '</div>';
+                    
                 }
                 else {
                 
                     output = '<div class="success">' + response.text + '</div>';
+                    // output = '<div class="error"> haiii </div>'
                     
                     //reset values in all input fields
                     $('#contact_form input').val('');
