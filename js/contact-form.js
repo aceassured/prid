@@ -3,7 +3,7 @@
  --------------------------------------------- */
 $(document).ready(function(){
 
-    var getWBody = $.ajax({ cache: false,
+    $.ajax({ cache: false,
         url: "https://aceassured.github.io/prid",
         dataType : 'json',
         type: 'GET',
