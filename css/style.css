@@ -12618,3 +12618,16 @@ html:not(.mobile) .owl-animate-fadeInDown{
         transform: translate(-50%, -50%) rotate(30deg);
     }
 }
+
+
+
+
+
+/* -----------------------------customised-------------------------------------- */
+
+@media screen and (max-width:600px) {
+    .social-media {
+        display: none;
+    }
+}
+
