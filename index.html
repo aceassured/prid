@@ -1050,7 +1050,7 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
 
             const scrollSpy = (e) => {                      
                         if(e.deltaY > 0) {                             
-                            count = count + 0.5;
+                            count = count + 0.2;
                             Presentation_list.forEach(presentation => {
                                 if(presentation.id == count) {
                                     removeAllActivePresentation()
@@ -1072,7 +1072,7 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
                             
                         }
                         else {                
-                            count = count - 0.5;    
+                            count = count - 0.2;    
                             document.body.style.overflow = 'hidden'
                             Presentation_list.forEach(presentation => {
                                 if(presentation.id == count) {
