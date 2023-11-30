@@ -833,6 +833,9 @@
     .contact-2-text{
         font-size: 16px;
     }
+    .services-tabs > li a.active > .number {
+        margin-left: -16px;
+    }
      
 }
     
