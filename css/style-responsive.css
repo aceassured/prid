@@ -10,7 +10,7 @@
         left: -30px;
     }
     .hs-line{
-        height: 107%;
+        height: 107% !important;
     }
     
 }
@@ -45,7 +45,7 @@
         font-size: calc(1.896rem + 1.15vw);
     }
     .hs-line{
-        height: 100%;
+        height: 100% !important;
     }
     .hs-title-1{
         font-size: calc(1.5rem + 3vw);
