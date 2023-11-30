@@ -9,6 +9,9 @@
     .decoration-1{
         left: -30px;
     }
+    .hs-line{
+        height: 110%;
+    }
     
 }
 @media only screen and (max-width: 1366px) {	
@@ -42,7 +45,7 @@
         font-size: calc(1.896rem + 1.15vw);
     }
     .hs-line{
-        height: 87vh;
+        height: 70vh;
     }
     .hs-title-1{
         font-size: calc(1.5rem + 3vw);
