@@ -6,7 +6,7 @@ if($_POST)
     // header("Content-Type: application/json"); // Set the content type to JSON
 
 
-	$to_Email   	= "kishore@aceassured.com"; //Replace with recipient email address
+	$to_Email   	= "talktous@theprid.com"; //Replace with recipient email address
 	$subject        = 'Message from website '.$_SERVER['SERVER_NAME']; //Subject line for emails
 	
 	
