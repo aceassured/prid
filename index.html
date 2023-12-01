@@ -1064,8 +1064,8 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
                                     presentation_list.classList.add('active','show')
                                 }                                
                             })        
-                            if(count > 5){
-                                count = 5
+                            if(count < 0){
+                                count = 0
                                 document.body.style.overflow = 'auto'
 
                             }
